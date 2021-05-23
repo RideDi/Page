@@ -31,24 +31,26 @@
         @selection-change="handleSelectionChange"
       >
         <el-table-column type="selection" width="55"></el-table-column>
-        <el-table-column prop="id" label="id" width="140"> </el-table-column>
-        <el-table-column prop="name" label="用户名" width="120">
+        <el-table-column prop="id" label="id" width="150"> </el-table-column>
+        <el-table-column prop="name" label="用户名" width="150">
+        </el-table-column
+        <el-table-column prop="na" label="用户昵称" width="150">
         </el-table-column>
-        <el-table-column prop="na" label="用户昵称" width="120">
-        </el-table-column>
-        <el-table-column prop="state" label="状态" width="120">
+        <el-table-column prop="state" label="状态" width="140">
           <el-tag type="success"
                   style="background-color: #667eea; color: snow"
           >已完成</el-tag>
         </el-table-column>
-        <el-table-column prop="operation" label="操作" width="220">
+        <el-table-column prop="operation" label="操作" width="240">
           <template #default="scope">
             <el-button size="mini" @click="handleEdit(scope.$index, scope.row)"
+                       style="margin-left: 10px"
                        class="text-gray-100 rounded-lg hover:bg-indigo-700 ease-in-out items-center justify-center bg-blue-500 "
             >编辑</el-button
             >
             <el-button
               size="mini"
+              style="margin-left: 50px"
               class="text-gray-100 rounded-lg hover:bg-indigo-700 ease-in-out items-center justify-center bg-gray-700"
               @click="handleDelete(scope.$index, scope.row)"
               >删除</el-button
@@ -59,6 +61,7 @@
           <template #default="scope">
             <el-button
               size="mini"
+              style="margin-left: 15px"
               class="text-gray-100 rounded-lg hover:bg-indigo-700 ease-in-out items-center justify-center bg-blue-800"
               @click="handleCheck(check.$index, scope.row)"
               >查看</el-button
