@@ -30,21 +30,20 @@
         tooltip-effect="dark"
         @selection-change="handleSelectionChange"
       >
-        <el-table-column type="selection" width="80"></el-table-column>
-        <el-table-column prop="id" label="id" width="180"> </el-table-column>
-        <el-table-column prop="name" label="用户名" width="180">
+        <el-table-column type="selection" width="80" align="center"></el-table-column>
+        <el-table-column prop="id" label="id" width="180" align="center"> </el-table-column>
+        <el-table-column prop="name" label="用户名" width="180" align="center">
         </el-table-column>
-        <el-table-column prop="na" label="用户昵称" width="180">
+        <el-table-column prop="na" label="用户昵称" width="180" align="center">
         </el-table-column>
-        <el-table-column prop="state" label="状态" width="180">
+        <el-table-column prop="state" label="状态" width="180" align="center">
           <el-tag type="success"
-                  style="background-color: #667eea; color: snow; margin-left: 30px"
+                  style="background-color: #667eea; color: snow;"
           >互相关注</el-tag>
         </el-table-column>
-        <el-table-column prop="operation" label="操作" width="260">
+        <el-table-column prop="operation" label="操作" width="260" align="center">
           <template #default="scope">
             <el-button size="mini" @click="handleEdit(scope.$index, scope.row)"
-                       style="margin-left: 30px"
                        class="text-gray-100 rounded-lg hover:bg-indigo-700 ease-in-out items-center justify-center bg-blue-500 "
             >编辑</el-button
             >

@@ -30,44 +30,12 @@
         tooltip-effect="dark"
         @selection-change="handleSelectionChange"
       >
-        <el-table-column type="selection" width="55"></el-table-column>
-        <el-table-column prop="id" label="id" width="150"> </el-table-column>
-        <el-table-column prop="name" label="用户名" width="150">
-        </el-table-column
-        <el-table-column prop="na" label="用户昵称" width="150">
-        </el-table-column>
-        <el-table-column prop="state" label="状态" width="140">
-          <el-tag type="success"
-                  style="background-color: #667eea; color: snow"
-          >已完成</el-tag>
-        </el-table-column>
-        <el-table-column prop="operation" label="操作" width="240">
-          <template #default="scope">
-            <el-button size="mini" @click="handleEdit(scope.$index, scope.row)"
-                       style="margin-left: 10px"
-                       class="text-gray-100 rounded-lg hover:bg-indigo-700 ease-in-out items-center justify-center bg-blue-500 "
-            >编辑</el-button
-            >
-            <el-button
-              size="mini"
-              style="margin-left: 50px"
-              class="text-gray-100 rounded-lg hover:bg-indigo-700 ease-in-out items-center justify-center bg-gray-700"
-              @click="handleDelete(scope.$index, scope.row)"
-              >删除</el-button
-            >
-          </template>
-        </el-table-column>
-        <el-table-column prop="check" label="详细信息" width="220">
-          <template #default="scope">
-            <el-button
-              size="mini"
-              style="margin-left: 15px"
-              class="text-gray-100 rounded-lg hover:bg-indigo-700 ease-in-out items-center justify-center bg-blue-800"
-              @click="handleCheck(check.$index, scope.row)"
-              >查看</el-button
-            >
-          </template>
-        </el-table-column>
+        <el-table-column type="selection" width="55" align="center"></el-table-column>
+        <el-table-column prop="id" label="id" width="150" align="center"></el-table-column>
+        <el-table-column prop="name" label="用户名" width="150" align="center"></el-table-column>
+        <el-table-column prop="justWriting" label="正文" width="350%" align="center"></el-table-column>
+        <el-table-column prop="numberOfComments" label="评论数" width="240" align="center"></el-table-column>
+        <el-table-column prop="linksNum" label="点赞数" width="220" align="center"></el-table-column>
       </el-table>
     </el-main>
   </el-container>
@@ -78,12 +46,11 @@
 export default {
   data() {
     const item = {
-      date: "2016-05-02",
-      name: "王小虎",
-      na: "xiaohu",
-      address: "上海市普陀区金沙江路 1518 弄",
-      id: 10000,
-      state: "已完成",
+      name: "BVB",
+      justWriting: "Finished the season with a 💥",
+      id: 666,
+      numberOfComments: 22,
+      linksNum: "4297"
     };
     return {
       tableData: Array(20).fill(item),
