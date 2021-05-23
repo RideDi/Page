@@ -31,14 +31,14 @@
         @selection-change="handleSelectionChange"
       >
         <el-table-column type="selection" width="80"></el-table-column>
-        <el-table-column prop="id" label="id" width="170"> </el-table-column>
-        <el-table-column prop="name" label="用户名" width="160">
+        <el-table-column prop="id" label="id" width="180"> </el-table-column>
+        <el-table-column prop="name" label="用户名" width="180">
         </el-table-column>
-        <el-table-column prop="na" label="用户昵称" width="160">
+        <el-table-column prop="na" label="用户昵称" width="180">
         </el-table-column>
-        <el-table-column prop="state" label="状态" width="160">
+        <el-table-column prop="state" label="状态" width="180">
           <el-tag type="success"
-                  style="background-color: #667eea; color: snow"
+                  style="background-color: #667eea; color: snow; margin-left: 30px"
           >互相关注</el-tag>
         </el-table-column>
         <el-table-column prop="operation" label="操作" width="260">
